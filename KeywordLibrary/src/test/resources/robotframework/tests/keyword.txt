@@ -1,0 +1,4 @@
+*** Keywords ***
+get message
+    ${MY_STATIC_MESSAGE} =  ExampleKeyword->getMessage
+    Log  ${MY_STATIC_MESSAGE}

@@ -21,12 +21,14 @@ public abstract class AbstractRobotKeywords implements RobotKeywords {
         try {
             for (Method m : clazz.getMethods()) {
                 if (m.isAnnotationPresent(RobotDynamicKeyword.class)) {
+System.out.println(component.value() + "->" + m.getName());
                     keywords.add(component.value() + "->" + m.getName());
                 }
             }
         }  catch (Exception ex) {
             ex.printStackTrace();
         }
+
         return keywords;
     }
 

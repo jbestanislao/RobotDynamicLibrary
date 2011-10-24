@@ -1,0 +1,8 @@
+*** Settings ***
+Library     robot.dynamic.library.example.ExampleKeywordLibrary
+Resource    src/test/resources/robotframework/tests/keyword.txt
+
+
+*** Test Cases ***
+My Robot Dynamic Library Example
+    get message
