@@ -1,8 +1,14 @@
 *** Settings ***
-Library     robot.dynamic.library.example.ExampleKeywordLibrary
-Resource    src/test/resources/robotframework/tests/keyword.txt
+Library             SeleniumLibrary
+Library             robot.dynamic.library.example.ExampleKeywordLibrary
+Resource            src/test/resources/robotframework/tests/keyword.txt
+Suite Setup         Start Selenium Server
+Suite Teardown      Stop Selenium Server
 
 
 *** Test Cases ***
 My Robot Dynamic Library Example
     get message
+    Open Browser  http://www.google.com
+    Maximize Browser Window
+
